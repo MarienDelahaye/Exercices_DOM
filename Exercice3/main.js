@@ -4,12 +4,15 @@ var liItems = document.getElementsByTagName("li");
 
 // Functions //
 
+// Script Part //
 for (let i = 0; i < liItems.length; i++){
     liItems[i].click
-        document.getElementById("li").addEventListener("click", function(){
-            document.getElementById("div1").innerHTML = (this.innerText);
+    function divContent(){
+        document.getElementById("div1").innerHTML = (liItems[i].innerText);
+    }
+    
+        liItems[i].addEventListener("click", function(){
+            divContent();
 
     }
         )};
-
-// Script Part //
